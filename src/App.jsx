@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import TopNavbar from "./components/TopNavbar";
 import AttendancePage from "./components/AttendancePage";
+import Dashboard from "./components/Dashboard";
 
 export default function App() {
   const [isExpanded, setIsExpanded] = useState(false); // State to control sidebar
@@ -30,6 +31,7 @@ export default function App() {
           <div className="flex-1 p-4">
             <Routes>
               <Route path="/attendance" element={<AttendancePage />} />
+              <Route path="/" element={<Dashboard />} />
             </Routes>
           </div>
         </div>
